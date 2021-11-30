@@ -45,7 +45,7 @@
                 <Button x:Name="btnCheckOut" Content=" Checkout" Canvas.Left="577" Canvas.Top="117" Width="82"/>
             </Canvas>
         </GroupBox>
-        <Menu x:Name="mnuMain" HorizontalAlignment="Center" Height="26" VerticalAlignment="Top"
+        <Menu x:Name="mnuMain" HorizontalAlignment="Left" Height="26" VerticalAlignment="Top"
 Width="160" Grid.ColumnSpan="3">
             <MenuItem Header="File" Height="22" Width="60">
                 <MenuItem Header="Exit" Click="exitToolStripMenuItem_Click"/>
