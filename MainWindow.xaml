@@ -61,6 +61,5 @@ Width="131" Margin="19,10,0,0">
                 <MenuItem x:Name="mnuStop" Header="Stop" Click="stopToolStripMenuItem_Click"/>
             </MenuItem>
         </Menu>
-
     </Grid>
 </Window>
