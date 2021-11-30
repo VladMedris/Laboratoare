@@ -30,6 +30,22 @@ namespace Medris_Vlad_Lab2
             InitializeComponent();
         }
 
+        private void FilledItemsShow_Click(object sender, RoutedEventArgs e){
+            string mesaj;
+            MenuItem SelectedItem = (MenuItem)e.OriginalSource;
+            mesaj = SelectedItem.Header.ToString() + " doughnuts are being cooked right now";
+            this.Title = mesaj;
+        }
+
+        private void FilledItems_Click(object sender, RoutedEventArgs e){
+            string DoughnutFlavour;
+
+            MenuItem SelectedItem = (MenuItem)e.OriginalSource;
+            DoughnutFlavour = SelectedItem.Header.ToString();
+            Enum.TryParse(DoughnutFlavour, out DoughnutType myFlavour);
+            myDoughnutMachine.MakeDoughnuts(myFlavour);
+        }
+
         private void txtQuantity_KeyPress(object sender, System.Windows.Input.KeyEventArgs e){
             if (!(e.Key >= System.Windows.Input.Key.D0 && e.Key <= System.Windows.Input.Key.D9))
             {
@@ -55,6 +71,18 @@ namespace Medris_Vlad_Lab2
                 case DoughnutType.Sugar:
                     mRaisedSugar++;
                     txtSugarRaised.Text = mRaisedSugar.ToString();
+                    break;
+                case DoughnutType.Lemon:
+                    mFilledLemon++;
+                    txtLemonFilled.Text = mFilledLemon.ToString();
+                    break;
+                case DoughnutType.Chocolate:
+                    mFilledChocolate++;
+                    txtChocolateFilled.Text = mFilledChocolate.ToString();
+                    break;
+                case DoughnutType.Vanilla:
+                    mFilledVanilla++;
+                    txtVanillaFilled.Text = mFilledVanilla.ToString();
                     break;
             }
             myDoughnutMachine.DoughnutComplete += new DoughnutMachine.DoughnutCompleteDelegate(DoughnutCompleteHandler);
