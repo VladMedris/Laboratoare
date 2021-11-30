@@ -7,7 +7,7 @@
         xmlns:CustomCommands="clr-namespace:Medris_Vlad_Lab2.CustomCommands"
         mc:Ignorable="d"
         Title="Virtual Doughnuts Factory" Height="450" Width="800" ResizeMode="NoResize" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}">
-    <Grid x:Name="frmMain" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" MenuItem.Click="FilledItemsShow_Click">
+    <Grid x:Name="frmMain" Background="{DynamicResource {x:Static SystemColors.ActiveCaptionBrushKey}}" MenuItem.Click="FilledItemsShow_Click" Loaded="frmMain_Loaded">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
