@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Threading;
 
 namespace Medris_Vlad_Lab2
 {
-    class DoughnutMachine{
+    class DoughnutMachine : System.ComponentModel.Component{
         private DoughnutType mFlavor;
         private System.Collections.ArrayList mDoughnuts = new System.Collections.ArrayList();
         public delegate void DoughnutCompleteDelegate();
@@ -61,11 +59,12 @@ namespace Medris_Vlad_Lab2
             this.doughnutTimer.Tick += new EventHandler(this.doughnutTimer_Tick);
         }
 
-        public Doughnut this[int Index] {
+        public Doughnut this[int Index]{
             get{
                 return (Doughnut)mDoughnuts[Index];
 
             }
+
             set{
                 mDoughnuts[Index] = value;
             }
